@@ -9,5 +9,15 @@ class WebModel extends Connection{
 		$query = "SELECT * FROM posts WHERE id = " . $id;
 		return $this->con->query($query);
 	}
+
+	public function searchModel($slug){
+		$query = "SELECT * FROM posts WHERE slug LIKE '%$slug%';";
+		return $this->con->query($query);
+	}
+
+	public function getCategory($parent){
+		$query = "SELECT * FROM posts INNER JOIN categories ON posts.category_id = " . $parent;
+		return $this->con->query($query);
+	}
 }
 ?>

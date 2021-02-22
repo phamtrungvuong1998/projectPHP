@@ -31,17 +31,19 @@
         <div class="w3-col m2">Ngày tạo</div>
         <div class="w3-col m3">Action</div>
       </div>
-      <div class="row">
-        <?php while ($row = $data['result']->fetch_assoc()) { ?>
-        <div class="w3-col m1"><?php echo $row['id']; ?></div>
+      <div class="w3-row">
+        <form action="http://localhost:8080/Project_php_26/UserManage/updateStaff" method="post">
+          <?php while ($row = $data['result']->fetch_assoc()) { ?>
+        <div name="id" class="w3-col m1"><?php echo $row['id']; ?></div>
         <div class="w3-col m2"><?php echo $row['name']; ?></div>
         <div class="w3-col m4"><?php echo $row['email']; ?></div>
         <div class="w3-col m2"><?php echo $row['created_at']; ?></div>
         <div class="w3-col m3">
           <a href="http://localhost:8080/Project_php_26/UserManage/delete/<?php echo $row['id']; ?>" class=" btn btn-danger">Xóa</a>
-          <a href="" class=" btn btn-danger">Khóa tài khoản</a>
+          <button type="submit" name="update" value="<?php echo $row['id']; ?>" class="btn btn-success">Lên nhân viên</button>
         </div>
       <?php }?>
+        </form>
       </div>
     </div>
 

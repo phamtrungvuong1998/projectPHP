@@ -27,5 +27,11 @@ class UserManage extends Controller{
 		$result = $userManage->delete($getId);
 		header("Location: http://localhost:8080/Project_php_26/UserManage/staff");
 	}
+
+	public function updateStaff(){
+		$updateStaff = $this->get();
+		$result = $updateStaff->updateStaff($_POST['update']);
+		header("Location: http://localhost:8080/Project_php_26/UserManage/staff");
+	}
 }
 ?>

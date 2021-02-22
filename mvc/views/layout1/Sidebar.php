@@ -53,9 +53,6 @@
           </div>
           <a href="http://localhost:8080/Project_php_26/Account/Home" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bullseye fa-fw"></i>  Account</a>
           <a href="http://localhost:8080/Project_php_26/Post/Home" class="w3-bar-item w3-button w3-padding"><i class="fa fa-diamond fa-fw"></i>  Bài viết của bạn</a>
-          <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"></i>  News</a>
-          <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bank fa-fw"></i>  General</a>
-          <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-history fa-fw"></i>   History</a>
           <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Settings</a><br><br>
       </div>
 

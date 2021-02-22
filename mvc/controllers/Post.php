@@ -15,9 +15,43 @@ class Post extends Controller{
 	}
 
 	public function PostAddProcess(){
+		$cate = $_POST['category'];
+		$slugPost = '';
+		$strPost = explode(" ", trim($_POST['title']));
+		for ($i=0; $i < count($strPost) ; $i++) { 
+			if ($i == count($strPost) - 1) {
+				$slugPost = $slugPost . $strPost[$i];
+			}else{
+				$slugPost = $slugPost . $strPost[$i] . "-";
+			}
+		}
+		
+		if ($cate == 1) {
+			$name = "Tin Tức";
+		}else if ($cate == 2) {
+			$name = "Giáo dục";
+		}else if ($cate == 3) {
+			$name = "Xã hội";
+		}else if ($cate == 4) {
+			$name = "Kinh tế";
+		}
+
+		$slugCate = '';
+		$strCate = explode(" ", trim($name));
+		for ($i=0; $i < count($strCate) ; $i++) { 
+			if ($i == count($strCate) - 1) {
+				$slugCate = $slugCate . $strCate[$i];
+			}else{
+				$slugCate = $slugCate . $strCate[$i] . "-";
+			}
+		}
+
+
+
 		if (isset($_POST['add'])) {
 			$postAdd = $this->get();
-			$result = $postAdd->postAdd($_POST['title'], $_POST['description'], $_POST['content'], $_SESSION['login']['id']);
+			$categories = $postAdd->category($name, $cate, $_POST['description'], $slugCate);
+			$result = $postAdd->postAdd($_POST['title'], $_POST['description'], $_POST['content'], $_SESSION['login']['id'], $slugPost, $_POST['category']);
 			header("Location: http://localhost:8080/Project_php_26/Post/Home");
 		}
 	}

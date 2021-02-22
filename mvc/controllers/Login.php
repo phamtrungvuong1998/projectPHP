@@ -15,7 +15,7 @@ class Login extends Controller{
 			$row = $result->fetch_assoc();
 			if (is_array($row)) {
 				$_SESSION['login'] = $row;
-				header("Location: http://localhost:8080/Project_php_26/");
+				header("Location: http://localhost:8080/Project_php_26/Dashboard");
 			}else{
 				$this->view("login", ['styleLogin' => 2]);
 			}	
@@ -42,7 +42,7 @@ class Login extends Controller{
 					$registerProcess = $this->model("LoginModel");
 					$result = $registerProcess->RegisterModel($_POST['name'], $_POST['email'], $_POST['pass']);
 
-					header("Location: http://localhost:8080/Project_php_26/");
+					header("Location: http://localhost:8080/Project_php_26/Login/Home");
 				}
 			}
 		}

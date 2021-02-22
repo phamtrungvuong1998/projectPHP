@@ -14,5 +14,10 @@ class UserManageModel extends Connection{
 		$query = "SELECT * FROM users WHERE level = 2";
 		return $this->con->query($query);
 	}
+
+	public function updateStaff($id){
+		$query = "UPDATE users SET level = '2' WHERE id = " . $id;
+		return $this->con->query($query);
+	}
 }
 ?>

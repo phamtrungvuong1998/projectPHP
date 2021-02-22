@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-  input[type=email], input[type=text] {
+  input[type=email], input[type=text], input[type=password] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -33,13 +33,18 @@
       <h5><b><i class="fa fa-dashboard"></i> Account</b></h5>
     </header>
     <div class="container">
-      <div class="row">
+      <form action="http://localhost:8080/Project_php_26/Account/editAccount" method="post">
+        <div class="row">
         <?php $row = $data['result']->fetch_assoc(); ?>
         <label for="uname"><b>Email :</b></label>
         <input type="email" placeholder="Enter Email" name="email" value="<?php echo $row['email'];?>" required>
         <label for="uname"><b>Họ và tên :</b></label>
-        <input type="text" placeholder="Enter Email" name="email" value="<?php echo $row['name'];?>" required>
+        <input type="text" placeholder="Enter Email" name="name" value="<?php echo $row['name'];?>" required>
+        <label for="uname"><b>Mật khẩu :</b></label>
+        <input type="password" placeholder="Enter Email" name="pass" value="<?php echo $row['password'];?>" required>
       </div>
+      <center><button type="submit" class="btn btn-success">Thay đổi</button></center>
+      </form>
     </div>
 
   <!-- Footer -->
