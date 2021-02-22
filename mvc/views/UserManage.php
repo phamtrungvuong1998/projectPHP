@@ -23,22 +23,22 @@
       <h5><b><i class="fa fa-dashboard"></i> Quản lý người dùng</b></h5>
     </header>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-1">ID</div>
-        <div class="col-md-2">Họ tên</div>
-        <div class="col-md-3">Email</div>
-        <div class="col-md-2">Ngày tạo</div>
-        <div class="col-md-4">Action</div>
+    <div class="w3-container">
+      <div class="w3-row">
+        <div class="w3-col m1">ID</div>
+        <div class="w3-col m2">Họ tên</div>
+        <div class="w3-col m4">Email</div>
+        <div class="w3-col m2">Ngày tạo</div>
+        <div class="w3-col m3">Action</div>
       </div>
       <div class="row">
         <?php while ($row = $data['result']->fetch_assoc()) { ?>
-        <div class="col-md-1"><?php echo $row['id']; ?></div>
-        <div class="col-md-2"><?php echo $row['name']; ?></div>
-        <div class="col-md-3"><?php echo $row['email']; ?></div>
-        <div class="col-md-2"><?php echo $row['created_at']; ?></div>
-        <div class="col-md-4">
-          <a href="http://localhost:8080/phamtrungvuong/UserManage/delete/<?php echo $row['id']; ?>" class=" btn btn-danger">Xóa</a>
+        <div class="w3-col m1"><?php echo $row['id']; ?></div>
+        <div class="w3-col m2"><?php echo $row['name']; ?></div>
+        <div class="w3-col m4"><?php echo $row['email']; ?></div>
+        <div class="w3-col m2"><?php echo $row['created_at']; ?></div>
+        <div class="w3-col m3">
+          <a href="http://localhost:8080/Project_php_26/UserManage/delete/<?php echo $row['id']; ?>" class=" btn btn-danger">Xóa</a>
           <a href="" class=" btn btn-danger">Khóa tài khoản</a>
         </div>
       <?php }?>

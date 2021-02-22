@@ -6,7 +6,7 @@
 		}
 
 		public function RegisterModel($name, $email, $pass){
-			$query = "INSERT INTO `users` (`id`, `name`, `email`, `password`, `avatar`, `created_at`) VALUES (NULL, '$name', '$email', '$pass', '/anh.png', '2021-02-17 22:10:21')";
+			$query = "INSERT INTO `users` (`id`, `name`, `email`, `password`, `avatar`, `created_at`,`level`) VALUES (NULL, '$name', '$email', '$pass', '/anh.png', '2021-02-17 22:10:21', 1)";
 			return $this->con->query($query);
 		}
 

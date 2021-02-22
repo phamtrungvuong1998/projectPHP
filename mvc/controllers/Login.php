@@ -4,7 +4,7 @@ class Login extends Controller{
 		return $this->model("LoginModel");
 	}
 	public function Home(){
-		$this->view("login");
+		$this->view("login", ['styleLogin' => 1]);
 	}
 
 	public function loginProcess(){
@@ -15,7 +15,9 @@ class Login extends Controller{
 			$row = $result->fetch_assoc();
 			if (is_array($row)) {
 				$_SESSION['login'] = $row;
-				header("Location: http://localhost:8080/phamtrungvuong/");
+				header("Location: http://localhost:8080/Project_php_26/");
+			}else{
+				$this->view("login", ['styleLogin' => 2]);
 			}	
 		}
 	}
@@ -34,22 +36,21 @@ class Login extends Controller{
 			$row = $result->fetch_assoc();
 			if (is_array($row)) {
 				$this->view("register", ['style1' => 2] );
-			}else{
-				if ($_POST['pass'] != $_POST['repass']) {
+			}else if($_POST['pass'] != $_POST['repass']){
 					$this->view("register", ['style2' => 2]);
 				}else{
 					$registerProcess = $this->model("LoginModel");
 					$result = $registerProcess->RegisterModel($_POST['name'], $_POST['email'], $_POST['pass']);
 
-					header("Location: http://localhost:8080/phamtrungvuong/");
+					header("Location: http://localhost:8080/Project_php_26/");
 				}
 			}
 		}
-	}
+	
 
 	public function logout(){
 		session_destroy();
-		header("Location: http://localhost:8080/phamtrungvuong/");
+		header("Location: http://localhost:8080/Project_php_26/");
 	}
 
 }

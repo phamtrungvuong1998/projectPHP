@@ -25,14 +25,34 @@
       <a href="" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
       <div class="w3-container">
           <div class="w3-dropdown-click">
-            <a onclick="myFunction()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bank fa-fw"></i>Dành cho quản lí</a>
+            <a onclick="myFunction()" class="w3-bar-item w3-button w3-padding" style="display: <?php 
+                if ($_SESSION['login']['level'] == 3) {
+                  echo "block";
+                }else{
+                  echo "none";
+                }
+            ?>;"><i class="fa fa-bank fa-fw"></i>Dành cho quản lí</a>
             <div id="Demo" class="w3-dropdown-content w3-bar-block w3-border">
-              <a href="http://localhost:8080/phamtrungvuong/UserManage" class="w3-bar-item w3-button">Người dùng</a>
-              <a href="http://localhost:8080/phamtrungvuong/PostManage" class="w3-bar-item w3-button">Bài viết</a>
+              <a href="http://localhost:8080/Project_php_26/UserManage/staff" class="w3-bar-item w3-button">Nhân viên</a>
+              <a href="http://localhost:8080/Project_php_26/UserManage" class="w3-bar-item w3-button">Người dùng</a>
+              <a href="http://localhost:8080/Project_php_26/PostManage" class="w3-bar-item w3-button">Bài viết</a>
             </div>
           </div>
-          <a href="http://localhost:8080/phamtrungvuong/Account/Home" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bullseye fa-fw"></i>  Account</a>
-          <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-diamond fa-fw"></i>  Orders</a>
+          <div class="w3-dropdown-click">
+            <a onclick="myFunction()" class="w3-bar-item w3-button w3-padding" style="display: <?php 
+                if ($_SESSION['login']['level'] == 2) {
+                  echo "block";
+                }else{
+                  echo "none";
+                }
+            ?>;"><i class="fa fa-bank fa-fw"></i>Dành cho nhân viên</a>
+            <div id="Demo" class="w3-dropdown-content w3-bar-block w3-border">
+              <a href="http://localhost:8080/Project_php_26/UserManage" class="w3-bar-item w3-button">Người dùng</a>
+              <a href="http://localhost:8080/Project_php_26/PostManage" class="w3-bar-item w3-button">Bài viết</a>
+            </div>
+          </div>
+          <a href="http://localhost:8080/Project_php_26/Account/Home" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bullseye fa-fw"></i>  Account</a>
+          <a href="http://localhost:8080/Project_php_26/Post/Home" class="w3-bar-item w3-button w3-padding"><i class="fa fa-diamond fa-fw"></i>  Bài viết của bạn</a>
           <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"></i>  News</a>
           <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bank fa-fw"></i>  General</a>
           <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-history fa-fw"></i>   History</a>

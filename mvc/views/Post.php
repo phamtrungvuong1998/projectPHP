@@ -3,12 +3,6 @@
 <title>Quản trị</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-  .man{
-    height: 50px;
-  }
-</style>
-
 <?php require_once 'layout1/Link1.php'; ?> 
 <body class="w3-light-grey">
 
@@ -26,29 +20,28 @@
 
   <!-- Header -->
     <header class="w3-container" style="padding-top:22px">
-      <h5><b><i class="fa fa-dashboard"></i> Quản lý bài viết</b></h5>
+      <h5><b><i class="fa fa-dashboard"></i> Bài viết của bạn</b></h5>
     </header>
 
     <div class="w3-container">
       <div class="w3-row">
-        <div class="w3-col m1"><h4>ID</h4></div>
-        <div class="w3-col m7"><h4>Tiêu đề</h4></div>
-        <div class="w3-col m2"><h4>Ngày tạo</h4></div>
-        <div class="w3-col m2"><h4>Action</h4></div>
+        <div class="w3-col m1">ID</div>
+        <div class="w3-col m4">Tiêu đề</div>
+        <div class="w3-col m2">Ngày tạo</div>
+        <div class="w3-col m5">Action</div>
       </div>
-      <div class="row">
+      <div class="w3-row">
         <?php while ($row = $data['result']->fetch_assoc()) {?>
-        <div class="w3-col m1 man"><?php echo $row['id']; ?></div>
-        <div class="w3-col m7 man"><?php echo $row['title']; ?></div>
-        <div class="w3-col m2 man"><?php echo $row['created_at']; ?></div>
-        <div class="w3-col m2 man">
+        <div class="w3-col m1" style="height: 50px;"><?php echo $row['id']; ?></div>
+        <div class="w3-col m4" style="height: 50px;"><?php echo $row['title']; ?></div>
+        <div class="w3-col m2" style="height: 50px;"><?php echo $row['created_at']; ?></div>
+        <div class="w3-col m5" style="height: 50px;">
           <a href="http://localhost:8080/Project_php_26/PostManage/delete/<?php echo $row['id']; ?>" class="btn btn-danger">Xóa</a>
         </div>
       <?php }?>
       </div>
+      <center><a href="http://localhost:8080/Project_php_26/Post/PostAdd" class="btn btn-success">Thêm bài viết</a></center>
     </div>
-    </div>
-
   <!-- Footer -->
     
 

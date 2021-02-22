@@ -1,15 +1,31 @@
 <?php
 class UserManage extends Controller{
+	public function get(){
+		return $this->model("UserManageModel");
+	}
+
 	public function Home(){
-		$userManage = $this->model("UserManageModel");
+		$userManage = $this->get();
 		$result = $userManage->getList();
 		$this->view("UserManage", ['result' => $result]);
 	}
 
 	public function delete($getId){
-		$userManage = $this->model("UserManageModel");
+		$userManage = $this->get();
 		$result = $userManage->delete($getId);
-		header("Location: http://localhost:8080/phamtrungvuong/UserManage");
+		header("Location: http://localhost:8080/Project_php_26/UserManage");
+	}
+
+	public function staff(){
+		$staff = $this->get();
+		$result = $staff->staffGetList();
+		$this->view("Staff", ['result' => $result]);
+	}
+
+	public function deleteStaff($getId){
+		$userManage = $this->get();
+		$result = $userManage->delete($getId);
+		header("Location: http://localhost:8080/Project_php_26/UserManage/staff");
 	}
 }
 ?>

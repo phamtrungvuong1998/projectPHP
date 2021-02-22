@@ -13,7 +13,7 @@ class PostManage extends Controller{
 	public function delete($getId){
 		$PostManage = $this->get();
 		$result = $PostManage->delete($getId);
-		header("Location: http://localhost:8080/phamtrungvuong/PostManage");
+		header("Location: http://localhost:8080/Project_php_26/PostManage");
 
 	}
 }

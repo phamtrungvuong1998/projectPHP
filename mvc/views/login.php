@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +17,7 @@
 <body>
 <div id="id01" class="modal">
   
-  <form class="modal-content animate" action="http://localhost:8080/phamtrungvuong/Login/loginProcess" method="post">
+  <form class="modal-content animate" action="http://localhost:8080/Project_php_26/Login/loginProcess" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="img_avatar2.png" alt="Avatar" class="avatar">
@@ -32,7 +31,13 @@
       <input type="password" placeholder="Enter Password" name="pass" value="" required>
         
       <button type="submit" name="login">Login</button>
-      <span class="psw"><a href="http://localhost:8080/phamtrungvuong/Login/register">Đăng ký ?</a></span>
+      <div style="color: red; display: <?php if ($data['styleLogin'] == 1) {
+        echo "none";
+      } else {
+        echo "block";
+      }
+      ?>;">Email hoặc mật khẩu sai </div>
+      <span class="psw"><a href="http://localhost:8080/Project_php_26/Login/register">Đăng ký ?</a></span>
       <label>
         <input type="checkbox" checked="checked" name="remember" value="1"> Remember me
       </label>
