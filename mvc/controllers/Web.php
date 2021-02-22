@@ -9,5 +9,11 @@ class Web extends Controller{
 		$result = $get->Home();
 		$this->view("WebIndex", ['result' => $result]);
 	}
+
+	public function detail($getID){
+		$detail = $this->get();
+		$result = $detail->detail($getID);
+		$this->view("WebDetail", ['result' => $result]);
+	}
 }
 ?>

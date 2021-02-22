@@ -15,10 +15,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 <div class="w3-content" style="max-width:1400px">
 
 <!-- Header -->
-<header class="w3-container w3-center w3-padding-32"> 
-  <h1><b>PHẠM TRUNG VƯỢNG</b></h1>
-  <p>Welcome to the blog of <span class="w3-tag">unknown</span></p>
-</header>
+<?php require_once './mvc/views/layoutWeb/header.php'; ?>
 
 <!-- Grid -->
 <div class="w3-row">
@@ -36,9 +33,10 @@ and is wrapped around the whole page content, except for the footer in this exam
     </div>
 
     <div class="w3-container">
+      <p><?php echo $row['content']; ?></p>
       <div class="w3-row">
         <div class="w3-col m8 s12">
-          <p><a href="http://localhost:8080/Project_php_26/Web/detail/<?php echo $row['id']; ?>" class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></a></p>
+          <p><b></b></p>
         </div>
         <div class="w3-col m4 w3-hide-small">
           <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">0</span></span></p>
