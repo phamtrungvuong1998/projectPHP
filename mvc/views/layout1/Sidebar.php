@@ -19,7 +19,7 @@
     </div>
     <hr>
     <div class="w3-container">
-      <h5>Dashboard</h5>
+      <a href="http://localhost:8080/Project_php_26/Web"><h5>Trang chủ</h5></a>
     </div>
     <div class="w3-bar-block">
       <a href="" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>

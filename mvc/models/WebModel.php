@@ -16,7 +16,7 @@ class WebModel extends Connection{
 	}
 
 	public function getCategory($parent){
-		$query = "SELECT * FROM posts INNER JOIN categories ON posts.category_id = " . $parent;
+		$query = "SELECT * FROM posts WHERE category_id = " . $parent;
 		return $this->con->query($query);
 	}
 }

@@ -35,6 +35,8 @@ and is wrapped around the whole page content, except for the footer in this exam
           <p><b></b></p>
         </div>
         <div class="w3-col m4 w3-hide-small">
+          <a href=""><p><span class="w3-padding-large w3-right"><b></b> <span class="w3-tag">DisLike</span></span></p></a>
+          <a href=""><p><span class="w3-padding-large w3-right"><b></b> <span class="w3-tag">Like</span></span></p></a>
           <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">0</span></span></p>
         </div>
       </div>

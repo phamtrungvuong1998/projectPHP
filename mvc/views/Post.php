@@ -36,7 +36,7 @@
         <div class="w3-col m4" style="height: 50px;"><?php echo $row['title']; ?></div>
         <div class="w3-col m2" style="height: 50px;"><?php echo $row['created_at']; ?></div>
         <div class="w3-col m5" style="height: 50px;">
-          <a href="http://localhost:8080/Project_php_26/PostManage/delete/<?php echo $row['id']; ?>" class="btn btn-danger">Xóa</a>
+          <a href="http://localhost:8080/Project_php_26/Post/delete/<?php echo $row['id']; ?>" class="btn btn-danger">Xóa</a>
         </div>
       <?php }?>
       </div>

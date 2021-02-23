@@ -51,9 +51,15 @@ class Post extends Controller{
 		if (isset($_POST['add'])) {
 			$postAdd = $this->get();
 			$categories = $postAdd->category($name, $cate, $_POST['description'], $slugCate);
-			$result = $postAdd->postAdd($_POST['title'], $_POST['description'], $_POST['content'], $_SESSION['login']['id'], $slugPost, $_POST['category']);
+			$result = $postAdd->postAdd($_POST['title'], $_POST['description'], $_POST['content'], $_SESSION['login']['id'], $slugPost, $cate);
 			header("Location: http://localhost:8080/Project_php_26/Post/Home");
 		}
+	}
+
+	public function delete($getID){
+		$delete = $this->get();
+ 		$result1 = $delete->delete($getID);
+		header("Location: http://localhost:8080/Project_php_26/Post/Home");
 	}
 }
 

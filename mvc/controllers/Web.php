@@ -30,5 +30,9 @@ class Web extends Controller{
 		$this->view("WebIndex",['result' => $result]);
 
 	}
+
+	public function like(){
+		
+	}
 }
 ?>
