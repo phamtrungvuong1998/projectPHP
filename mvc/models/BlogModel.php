@@ -1,5 +1,5 @@
 <?php
-class WebModel extends Connection{
+class BlogModel extends Connection{
 	public function Home(){
 		$query = "SELECT * FROM posts";
 		return $this->con->query($query);

@@ -16,11 +16,11 @@
           <button class="w3-padding-large w3-button" title="More">ĐĂNG NHẬP/ĐĂNG KÝ <i class="fa fa-caret-down"></i></button>     
           <div class="w3-dropdown-content w3-bar-block w3-card-4">
             <a href="http://localhost:8080/Project_php_26/LoginController/" class="w3-bar-item w3-button">Đăng nhập</a>
-            <a href="http://localhost:8080/Project_php_26/Login/register" class="w3-bar-item w3-button">Đăng ký</a>
+            <a href="http://localhost:8080/Project_php_26/LoginController/register" class="w3-bar-item w3-button">Đăng ký</a>
         <?php } ?>
       </div>
     </div>
-    <form method="post" action="http://localhost:8080/Project_php_26/Web/search">
+    <form method="post" action="http://localhost:8080/Project_php_26/BlogController/search">
       <input type="search" placeholder="Search" name="search" style="float: right; margin-top: 20px;">
       <i style="float: right; margin-top: 20px;"></i>
     </form>

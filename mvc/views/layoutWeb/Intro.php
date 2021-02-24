@@ -15,28 +15,28 @@
     </div>
     <ul class="w3-ul w3-hoverable w3-white">
       <li class="w3-padding-16">
-        <a href="http://localhost:8080/Project_php_26/Web/getCategory/1">
+        <a href="http://localhost:8080/Project_php_26/BlogController/getCategory/1">
           <img src="./mvc/views/assets/images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
         <span class="w3-large">Tin Tức</span><br>
         <span>Tin tức</span>
         </a>
       </li>
       <li class="w3-padding-16">
-        <a href="http://localhost:8080/Project_php_26/Web/getCategory/2">
+        <a href="http://localhost:8080/Project_php_26/BlogController/getCategory/2">
           <img src="./mvc/views/assets/images/gondol.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
         <span class="w3-large">Giáo dục</span><br>
         <span>Praes tinci sed</span>
         </a>
       </li> 
       <li class="w3-padding-16">
-        <a href="http://localhost:8080/Project_php_26/Web/getCategory/3">
+        <a href="http://localhost:8080/Project_php_26/BlogController/getCategory/3">
           <img src="./mvc/views/assets/images/skies.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
         <span class="w3-large">Xã hội</span><br>
         <span>Ultricies congue</span>
         </a>
       </li>   
       <li class="w3-padding-16 w3-hide-medium w3-hide-small">
-        <a href="http://localhost:8080/Project_php_26/Web/getCategory/4">
+        <a href="http://localhost:8080/Project_php_26/BlogController/getCategory/4">
           <img src="./mvc/views/assets/images/rock.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
         <span class="w3-large">Kinh tế</span><br>
         <span>Lorem ipsum dipsum</span>

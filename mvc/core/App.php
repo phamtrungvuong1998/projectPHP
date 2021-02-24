@@ -1,8 +1,8 @@
-<?php
+	<?php
 class App{
 
 	//url là http://localhost:8080/Project_php_26/controller/action/param
-	protected $controller = "Web";
+	protected $controller = "BlogController";
 	protected $action = "Home";
 	protected $param = [];
 	public function __construct(){
@@ -10,7 +10,7 @@ class App{
 		if (isset($url[0])) {
 			$this->controller = $url[0];
 		}
-			if ($this->controller == "Web") {
+			if ($this->controller == "BlogController") {
 				//Xử lý controller
 					require_once './mvc/controllers/'.$this->controller.'.php';
 
@@ -42,7 +42,7 @@ class App{
 					}
 					call_user_func([$this->controller, $this->action]);
 				}else{
-					$this->controller = "Dashboard";
+					$this->controller = "DashboardController";
 				//Xử lý controller
 					if (file_exists("./mvc/controllers/".$url[0].".php")) {
 						$this->controller = $url[0];

@@ -31,7 +31,7 @@ and is wrapped around the whole page content, except for the footer in this exam
     <div class="w3-container">
       <div class="w3-row">
         <div class="w3-col m8 s12">
-          <p><a href="http://localhost:8080/Project_php_26/Web/detail/<?php echo $row['id']; ?>" class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></a></p>
+          <p><a href="http://localhost:8080/Project_php_26/BlogController/detail/<?php echo $row['id']; ?>" class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></a></p>
         </div>
         <div class="w3-col m4 w3-hide-small">
           <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">0</span></span></p>
