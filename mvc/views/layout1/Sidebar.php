@@ -31,28 +31,14 @@
                 }else{
                   echo "none";
                 }
-            ?>;"><i class="fa fa-bank fa-fw"></i>Dành cho quản lí</a>
+            ?>;"><i class="fa fa-bank fa-fw"></i>Quản lí</a>
             <div id="Demo" class="w3-dropdown-content w3-bar-block w3-border">
-              <a href="http://localhost:8080/Project_php_26/UserManage/staff" class="w3-bar-item w3-button">Nhân viên</a>
-              <a href="http://localhost:8080/Project_php_26/UserManage" class="w3-bar-item w3-button">Người dùng</a>
-              <a href="http://localhost:8080/Project_php_26/PostManage" class="w3-bar-item w3-button">Bài viết</a>
+              <a href="http://localhost:8080/Project_php_26/UserController/getList/2" class="w3-bar-item w3-button">Người dùng</a>
+              <a href="http://localhost:8080/Project_php_26/PostController/getList/2" class="w3-bar-item w3-button">Bài viết</a>
             </div>
-          </div>
-          <div class="w3-dropdown-click">
-            <a onclick="myFunction()" class="w3-bar-item w3-button w3-padding" style="display: <?php 
-                if ($_SESSION['login']['level'] == 2) {
-                  echo "block";
-                }else{
-                  echo "none";
-                }
-            ?>;"><i class="fa fa-bank fa-fw"></i>Dành cho nhân viên</a>
-            <div id="Demo" class="w3-dropdown-content w3-bar-block w3-border">
-              <a href="http://localhost:8080/Project_php_26/UserManage" class="w3-bar-item w3-button">Người dùng</a>
-              <a href="http://localhost:8080/Project_php_26/PostManage" class="w3-bar-item w3-button">Bài viết</a>
-            </div>
-          </div>
-          <a href="http://localhost:8080/Project_php_26/Account/Home" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bullseye fa-fw"></i>  Account</a>
-          <a href="http://localhost:8080/Project_php_26/Post/Home" class="w3-bar-item w3-button w3-padding"><i class="fa fa-diamond fa-fw"></i>  Bài viết của bạn</a>
+          </div>  
+          <a href="http://localhost:8080/Project_php_26/UserController/getList/1" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bullseye fa-fw"></i>  Account</a>
+          <a href="http://localhost:8080/Project_php_26/PostController/getList/1" class="w3-bar-item w3-button w3-padding"><i class="fa fa-diamond fa-fw"></i>  Bài viết của bạn</a>
           <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Settings</a><br><br>
       </div>
 

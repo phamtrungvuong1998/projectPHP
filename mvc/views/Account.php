@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
 <title>Quản trị</title>
 <meta charset="UTF-8">
@@ -33,7 +33,7 @@
       <h5><b><i class="fa fa-dashboard"></i> Account</b></h5>
     </header>
     <div class="container">
-      <form action="http://localhost:8080/Project_php_26/Account/editAccount" method="post">
+      <form action="http://localhost:8080/Project_php_26/UserController/editAccount" method="post">
         <div class="row">
         <?php $row = $data['result']->fetch_assoc(); ?>
         <label for="uname"><b>Email :</b></label>

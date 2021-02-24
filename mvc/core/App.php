@@ -34,7 +34,7 @@ class App{
 					call_user_func_array([$this->controller, $this->action], $this->param);
 			}else{
 				if (!isset($_SESSION['login'])) {
-					$this->controller = "Login";
+					$this->controller = "LoginController";
 					require_once './mvc/controllers/'.$this->controller.'.php';
 					$this->controller = new $this->controller;
 					if (method_exists($this->controller, $url[1])) {

@@ -1,8 +1,13 @@
 <?php
 class PostModel extends Connection{
-	public function getList(){
-		$query = "SELECT posts.id, title, posts.created_at FROM posts INNER JOIN users ON posts.user_id = " . $_SESSION['login']['id'] . " AND " . "users.id = " . $_SESSION['login']['id'];
-		return $this->con->query($query);
+	public function getList($index){
+		if ($index == 2) {
+			$query = "SELECT * FROM posts";
+			 return $this->con->query($query);
+		}else{
+			$query = "SELECT posts.id, title, posts.created_at FROM posts INNER JOIN users ON posts.user_id = " . $_SESSION['login']['id'] . " AND " . "users.id = " . $_SESSION['login']['id'];
+			return $this->con->query($query);
+		}
 	}
 
 	public function getIdPost(){
@@ -10,7 +15,7 @@ class PostModel extends Connection{
 		
 	}
 
-	public function delete($id){
+	public function deletePost($id){
 		$query = "DELETE FROM posts WHERE id = " . $id;
 		return $this->con->query($query);
 	}

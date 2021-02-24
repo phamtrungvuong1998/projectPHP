@@ -38,7 +38,7 @@
       <h5><b><i class="fa fa-dashboard"></i> Thêm bài viết</b></h5>
     </header>
 
-    <form action="http://localhost:8080/Project_php_26/Post/PostAddProcess" method="post">
+    <form action="http://localhost:8080/Project_php_26/PostController/PostAddProcess" method="post">
       <label for="uname"><b>Thể loại</b></label>
       <select name="category">
         <option value="1">Tin Tức</option>
