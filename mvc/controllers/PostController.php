@@ -1,4 +1,4 @@
-<?php
+	<?php
 class PostController extends Controller{
 	public function get(){
 		return $this->model("PostModel");
@@ -9,7 +9,8 @@ class PostController extends Controller{
 		if ($number == 2) {
 			$this->view("Posts", ['result' => $result]);
 		}else{
-			$this->view("Post", ['result' => $result]);
+			$this->view("Post", ['result' => $result,
+								'check' => 1]);
 		}
 	}
 
@@ -24,7 +25,7 @@ class PostController extends Controller{
 	}
 
 	public function PostAdd(){
-		$this->view("PostAdd");
+		$this->view("Post",['check' => 2]);
 	}
 
 	public function PostAddProcess(){
